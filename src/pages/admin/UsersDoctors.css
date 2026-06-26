@@ -1,0 +1,44 @@
+.ud-table {
+  background: var(--surface-raised);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.ud-table__head,
+.ud-table__row {
+  display: grid;
+  grid-template-columns: 1.4fr 1.4fr 1fr 0.7fr;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 18px;
+}
+
+.ud-table__head {
+  background: var(--surface);
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-faint);
+}
+
+.ud-table__row {
+  border-top: 1px solid var(--border-soft);
+  font-size: 13px;
+}
+
+.ud-table__name {
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+@media (max-width: 760px) {
+  .ud-table__head {
+    display: none;
+  }
+  .ud-table__row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}

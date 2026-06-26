@@ -1,0 +1,246 @@
+.shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.shell__sidebar {
+  width: var(--sidebar-w);
+  flex-shrink: 0;
+  background: var(--secondary-color);
+  color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  padding: 22px 16px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.shell__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 8px 26px;
+}
+
+.shell__brand-mark {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  background: var(--main-color);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 17px;
+  color: var(--secondary-color);
+}
+
+.shell__brand-text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16.5px;
+  letter-spacing: -0.01em;
+}
+
+.shell__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.shell__nav-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.shell__nav-item:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--white-color);
+}
+
+.shell__nav-item.is-active {
+  background: var(--main-color);
+  color: var(--white-color);
+  font-weight: 600;
+}
+
+.shell__role-switch {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 14px;
+  margin-top: 10px;
+}
+
+.shell__role-switch-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0 8px 4px;
+}
+
+.shell__role-pills {
+  display: flex;
+  gap: 6px;
+}
+
+.shell__role-pill {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.75);
+  border-radius: var(--radius-sm);
+  padding: 7px 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.shell__role-pill.is-active {
+  background: var(--main-color);
+  border-color: var(--main-color);
+  color: var(--white-color);
+}
+
+.shell__role-pill:hover:not(.is-active) {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.shell__emergency-link {
+  display: block;
+  margin-top: 12px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  text-align: center;
+}
+
+.shell__emergency-link:hover {
+  color: var(--white-color);
+  text-decoration: underline;
+}
+
+.shell__main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.shell__topbar {
+  height: var(--topbar-h);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 28px;
+  background: var(--surface-raised);
+  border-bottom: 1px solid var(--border-soft);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.shell__topbar-spacer {
+  flex: 1;
+}
+
+.shell__icon-btn {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border-soft);
+  background: var(--surface);
+  color: var(--text-muted);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.shell__icon-btn:hover {
+  background: var(--primary-50);
+  color: var(--primary-700);
+}
+
+.shell__badge-dot {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 3px;
+  border-radius: 999px;
+  background: var(--red-color);
+  color: var(--white-color);
+  font-size: 10px;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--white-color);
+}
+
+.shell__who {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 12px;
+  border-left: 1px solid var(--border-soft);
+}
+
+.shell__avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--main-color);
+  color: var(--white-color);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.shell__who-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.shell__who-name {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.shell__who-role {
+  font-size: 11.5px;
+  color: var(--text-faint);
+}
+
+.shell__content {
+  flex: 1;
+  padding: 28px 32px 48px;
+  max-width: 1180px;
+  width: 100%;
+}
+
+@media (max-width: 860px) {
+  .shell__sidebar {
+    display: none;
+  }
+  .shell__content {
+    padding: 20px 16px 40px;
+  }
+}
